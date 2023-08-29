@@ -33,6 +33,8 @@ fi
 
 # Check if "00-extensions" file exists in "/etc/dconf/db/local.d/" directory
 if [ ! -f /etc/dconf/db/local.d/00-extensions ]; then
+    # If "/etc/dconf/db/local.d" directory doesn't exist, create it
+    sudo mkdir -p /etc/dconf/db/local.d
     # If "00-extensions" file doesn't exist, create it
     sudo touch /etc/dconf/db/local.d/00-extensions
 
